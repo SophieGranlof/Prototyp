@@ -1,0 +1,162 @@
+/* Allmän stil */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 480px; /* Gör appen mer kompakt för mobiler */
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #333;
+    text-align: center;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input, textarea {
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Scrollbar för eventlistan */
+#event-list {
+    max-height: 400px; /* Maxhöjd för eventlistan */
+    overflow-y: auto;  /* Vertikal scrollbar */
+    padding-right: 10px; /* För att undvika att scrollbaren täcker knapparna */
+}
+
+/* Enskilda event */
+li {
+    background-color: #f9f9f9;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button.edit,
+button.delete,
+button.share {
+    font-size: 16px;
+    padding: 8px 15px;
+    margin: 5px 0;
+}
+
+button.edit {
+    background-color: #ffa500;
+}
+
+button.delete {
+    background-color: #ff4d4d;
+}
+
+button.share {
+    background-color: #007bff;
+}
+
+button.edit:hover {
+    background-color: #ff7f50;
+}
+
+button.delete:hover {
+    background-color: #ff6666;
+}
+
+button.share:hover {
+    background-color: #0056b3;
+}
+
+/* Mobilanpassad design */
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    h1, h2 {
+        font-size: 24px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    input, textarea, button {
+        font-size: 16px;
+    }
+
+    button {
+        padding: 15px; /* Större knappar för lättare klick */
+    }
+
+    ul {
+        margin-top: 20px;
+    }
+}
+
+/* För ännu mindre skärmar (t.ex. mobiltelefoner i porträttläge) */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    input, textarea, button {
+        font-size: 14px; /* Justering för små skärmar */
+    }
+
+    button {
+        padding: 12px 20px;
+    }
+
+    li {
+        padding: 12px;
+    }
+}
